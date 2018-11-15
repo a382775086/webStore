@@ -7,7 +7,7 @@
 		<ul class="body">
 			<li>
 				<div class="itemVue">
-					<span class="iconfont icon-radio1"></span> 
+					<span class="iconfont" :class="[isSelected?'icon-radio1':'icon-radio']"></span> 
 					<div class="col-4">
 						<img src="src/pic/shopping/logo.png" class="img-fluid thumbnail"/>								
 					</div>
@@ -57,7 +57,8 @@ export default {
 		return {
 			num:0,
 			price:50,
-			show:false
+			show:false,
+			isSelected:false
 		}
 	},
 	methods:{
@@ -65,13 +66,10 @@ export default {
         	 if(this.num==0){
         	 	this.show=true}
         	this.num++
-        	this.$emit("totalcount",this.price)
-
         },
         reduce(){
         	if(this.num){
              this.num--
-	         this.$emit("totalcount",-this.price);
 	         if(this.num==0){
              this.show=false
 	         }
@@ -83,8 +81,9 @@ export default {
 }
 </script>
 <style>
-.icon-radio1{color:#EEEE00;font-size: 2rem;display: flex;align-items: center;background:#FA8072;}
-.icon-radio1::before{background:#FA8072;}.page3{background: #E0EEEE}
+.icon-radio1,.icon-radio{color:#FFA500;font-size: 2rem;}
+.page3 .itemVue {display: flex;align-items: center;margin-left: 1rem;}
+.page3{background: #E0EEEE}
 .page3 header{padding:0.5rem 0;}
 .page3 .itemVue{border-bottom: 2px dashed #FF8C69  }
 .jiesuan {background:#FA8072;display: flex;justify-content: space-between;margin-top:0.5rem}

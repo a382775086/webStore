@@ -1,84 +1,268 @@
 {
-	"衣服":{
-		"name1":"#衣服",
-		"a1":{
+	"流行女装":{
+		"name":"#流行女装",
+		"type":{
 			"上衣":[
 				{
-					"id":"1a",
-				"src":"src/pic/1a.jpg",
-				"price":"",
-				"introduce":""},
+					"id":"上衣1",
+				"src":"src/pic/shopping/a1.jpg",
+				"price":"299.00",
+				"introduce":"ZARA女装 V 领垂性衬衫"},
 				{
-					"id":"1a",
-				"src":"src/pic/1a.jpg",
-				"price":"",
-				"introduce":""},
+					"id":"上衣2",
+				"src":"src/pic/shopping/a2.jpg",
+				"price":"202.00",
+				"introduce":"Vero Moda简约通勤单排扣马蹄袖女衬衫|317351501"},
 				{
-					"id":"1a",
-				"src":"src/pic/1a.jpg",
-				"price":"",
-				"introduce":""
-				}
+					"id":"上衣3",
+				"src":"src/pic/shopping/a3.jpg",
+				"price":"1298.00",
+				"introduce":"冬装新款正反两穿中长双面呢大衣毛呢外套女"
+				},
+				{
+					"id":"上衣4",
+				"src":"src/pic/shopping/a4.jpg",
+				"price":"238.00",
+				"introduce":"新款韩版百搭短款仿水貂绒加厚冬天毛衣秋冬潮"
+				},
+				{
+					"id":"上衣5",
+				"src":"src/pic/shopping/a5.jpg",
+				"price":"107.00",
+				"introduce":"唐狮卫衣潮春秋新款连帽宽松粉色卫衣"
+				},
+				{
+					"id":"上衣6",
+				"src":"src/pic/shopping/a6.jpg",
+				"price":"200.00",
+				"introduce":"H＆M女装慵懒风毛衣女套头"
+				},
+				{
+					"id":"上衣7",
+				"src":"src/pic/shopping/a7.jpg",
+				"price":"349.00",
+				"introduce":"短款韩版长袖bf潮原宿风"
+				},
+				{
+					"id":"上衣8",
+				"src":"src/pic/shopping/a8.jpg",
+				"price":"799.00",
+				"introduce":"女装学生矮个子宽松时尚翻领毛绒外套"
+				},
+				{
+					"id":"上衣9",
+				"src":"src/pic/shopping/a9.jpg",
+				"price":"168.00",
+				"introduce":"毛呢秋冬韩版学生羊羔绒春秋棒球服"
+				},
+				{
+					"id":"上衣10",
+				"src":"src/pic/shopping/a10.jpg",
+				"price":"69.00",
+				"introduce":"牛仔修身显瘦韩版百搭学生大码外套"
+				},
+				{
+					"id":"上衣11",
+				"src":"src/pic/shopping/a11.jpg",
+				"price":"268.00",
+				"introduce":"毛绒韩版宽松百搭休闲毛茸茸夹克衫"
+				},
+				{
+					"id":"上衣12",
+				"src":"src/pic/shopping/a12.jpg",
+				"price":"265",
+				"introduce":"连帽毛绒外套女秋2018新款深秋韩版"
+				},
+				{
+					"id":"上衣13",
+				"src":"src/pic/shopping/a13.jpg",
+				"price":"78",
+				"introduce":"韩版修身加绒羊羔毛牛仔学生夹克"
+				}			
 			],
 			"裤子":[
 				{
-					"id":"1a",
-				"src":"src/pic/1a.jpg",
-				"price":"",
-				"introduce":""},
+					"id":"裤子1",
+				"src":"src/pic/shopping/b1.jpg",
+				"price":"199.00",
+				"introduce":"逸阳秋冬韩版毛呢宽松休闲羊毛格子裤"},
 				{
-					"id":"1a",
-				"src":"src/pic/1a.jpg",
-				"price":"",
-				"introduce":""},
+					"id":"裤子2",
+				"src":"src/pic/shopping/b2.jpg",
+				"price":"152.00",
+				"introduce":"逸阳秋季九分休闲韩版直筒秋冬高腰裤"},
 				{
-					"id":"1a",
-				"src":"src/pic/1a.jpg",
-				"price":"",
-				"introduce":""
+					"id":"裤子3",
+				"src":"src/pic/shopping/b3.jpg",
+				"price":"299.00",
+				"introduce":"ZARA女装 高腰微喇叭及踝裤2018新款百搭"
+				},
+				{
+					"id":"裤子4",
+				"src":"src/pic/shopping/b4.jpg",
+				"price":"99.00",
+				"introduce":"女装 针织紧身裤 408683 优衣库UNIQ"
+				},
+				{
+					"id":"裤子6",
+				"src":"src/pic/shopping/b5.jpg",
+				"price":"129.00",
+				"introduce":"女装 运动裤 408692 优衣库UNIQLO"
+				},
+				{
+					"id":"裤子6",
+				"src":"src/pic/shopping/b6.jpg",
+				"price":"119.00",
+				"introduce":"唐狮加厚加绒宽松冬季黑色运动裤"
+				},
+				{
+					"id":"裤子7",
+				"src":"src/pic/shopping/b7.jpg",
+				"price":"300.00",
+				"introduce":"哥弟秋冬修身显瘦女士裤子"
+				},
+				{
+					"id":"裤子8",
+				"src":"src/pic/shopping/b8.jpg",
+				"price":"299.00",
+				"introduce":"ZARA女装 休闲裤 06136067800"
+				},
+				{
+					"id":"裤子9",
+				"src":"src/pic/shopping/b9.jpg",
+				"price":"229.80",
+				"introduce":"裂帛刺绣直筒修身显瘦磨白百搭牛仔裤"
+				},
+				{
+					"id":"裤子10",
+				"src":"src/pic/shopping/b10.jpg",
+				"price":"99.80",
+				"introduce":"裂帛秋冬灰色松紧腰宽松加绒少女裤"
 				}
 			],
 			"鞋":[
 				{
-					"id":"1a",
-				"src":"src/pic/1a.jpg",
-				"price":"",
-				"introduce":""},
+					"id":"鞋1",
+				"src":"src/pic/shopping/c1.jpg",
+				"price":"499.00",
+				"introduce":"热风时尚女士圆头平底过膝靴"},
 				{
-					"id":"1a",
-				"src":"src/pic/1a.jpg",
-				"price":"",
-				"introduce":""},
+					"id":"鞋2",
+				"src":"src/pic/shopping/c2.jpg",
+				"price":"658.00",
+				"introduce":"百丽冬季弹力布平底过膝靴"},
 				{
-					"id":"1a",
-				"src":"src/pic/1a.jpg",
-				"price":"",
-				"introduce":""
-				}
+					"id":"鞋3",
+				"src":"src/pic/shopping/c3.jpg",
+				"price":"309.00",
+				"introduce":"卓诗尼长筒靴2018新款长靴女ins欧美过"
+				},
+				{
+					"id":"鞋4",
+				"src":"src/pic/shopping/c4.jpg",
+				"price":"179.00",
+				"introduce":"纯黑色女生长筒高帮平底帆布鞋"
+				},
+				{
+					"id":"鞋5",
+				"src":"src/pic/shopping/c5.jpg",
+				"price":"95.00",
+				"introduce":"人本高帮纯色系带平底学生休闲帆布鞋"
+				},
+				{
+					"id":"鞋6",
+				"src":"src/pic/shopping/c6.jpg",
+				"price":"1029.00",
+				"introduce":"美国直邮 71997 Skechers/斯凯奇女鞋"
+				},
+				{
+					"id":"鞋7",
+				"src":"src/pic/shopping/c7.jpg",
+				"price":"188.00",
+				"introduce":"红蜻蜓休闲时尚水钻内增高松糕鞋"
+				},
+				{
+					"id":"鞋8",
+				"src":"src/pic/shopping/c8.jpg",
+				"price":"268.00",
+				"introduce":"加绒内增高运动冬季棉鞋"
+				},
+				{
+					"id":"鞋9",
+				"src":"src/pic/shopping/c9.jpg",
+				"price":"279.00",
+				"introduce":"特丽雅秋冬系带深口英伦低跟休闲鞋"
+				},
+				{
+					"id":"鞋10",
+				"src":"src/pic/shopping/c10.jpg",
+				"price":"1699.00",
+				"introduce":"dr．martens碎花英伦美国直邮皮鞋"}
 			],
-			"帽子":[
+			"裙子":[
+			{
+					"id":"裙子1",
+				"src":"src/pic/shopping/d1.jpg",
+				"price":"129.00",
+				"introduce":"女装 柔软针织摇粒绒连衣裙"},
 				{
-					"id":"1a",
-				"src":"src/pic/1a.jpg",
-				"price":"",
-				"introduce":""},
+					"id":"裙子2",
+				"src":"src/pic/shopping/d2.jpg",
+				"price":"299.00",
+				"introduce":"女装 3D精纺美利奴半高领连衣裙"},
 				{
-					"id":"1a",
-				"src":"src/pic/1a.jpg",
-				"price":"",
-				"introduce":""},
+					"id":"裙子3",
+				"src":"src/pic/shopping/d3.jpg",
+				"price":"149.00",
+				"introduce":"ZARA新款 女装 格子连衣裙 03666169"
+				},
 				{
-					"id":"1a",
-				"src":"src/pic/1a.jpg",
-				"price":"",
-				"introduce":""
-				}
+					"id":"裙子4",
+				"src":"src/pic/shopping/d4.jpg",
+				"price":"269.00",
+				"introduce":"秋冬撞色拉链针织简约连衣裙"
+				},
+				{
+					"id":"裙子5",
+				"src":"src/pic/shopping/d5.jpg",
+				"price":"159.80",
+				"introduce":"裂帛2018秋装新款气质复古刺绣长袖"
+				},
+				{
+					"id":"裙子6",
+				"src":"src/pic/shopping/d6.jpg",
+				"price":"239.00",
+				"introduce":"初见 春装新款V领中袖短款小黑裙子女"
+				},
+				{
+					"id":"裙子7",
+				"src":"src/pic/shopping/d7.jpg",
+				"price":"278.00",
+				"introduce":"性感秋冬韩版收腰修身毛呢连衣裙"
+				},
+				{
+					"id":"裙子8",
+				"src":"src/pic/shopping/d8.jpg",
+				"price":"179.00",
+				"introduce":"小香风收腰娃娃领毛呢连衣裙"
+				},
+				{
+					"id":"裙子9",
+				"src":"src/pic/shopping/d9.jpg",
+				"price":"616.50",
+				"introduce":"希区瑞普高端复古名媛优雅气质羊毛呢"
+				},
+				{
+					"id":"裙子10",
+				"src":"src/pic/shopping/d10.jpg",
+				"price":"189.00",
+				"introduce":"韩版小香风加厚毛呢秋冬格子两件套"}				
 			]
 		}
 	},
 	"电子产品":{
 		 "name":"#电子产品",
-         "a1":{
+         "type":{
         "手机":{},
 		"电脑配件":{},
 		"相机":{},
