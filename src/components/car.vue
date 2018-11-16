@@ -1,88 +1,57 @@
 <template>
-	<div class="page3">
-		<header>
-			<h2 class="text-center">购物车</h2>
-			<hr/>
-		</header>
-		<ul class="body">
-			<li>
-				<div class="itemVue">
-					<span class="iconfont" :class="[isSelected?'icon-radio1':'icon-radio']"></span> 
-					<div class="col-4">
-						<img src="src/pic/shopping/logo.png" class="img-fluid thumbnail"/>								
-					</div>
-					<div class="introduce">
-						<span class="text-right">123123123</span>
-						<div class="introduce-bottom">
-							<span class="price">{{price}}</span>
-							<div class="count">
-								<transition name="showhide">
-									<div v-show="show" id="showhide">
-										<span class="iconfont icon-jian1 btn btn-light" @touchend.stop="reduce"></span>
-										<span class="num">{{num}}</span>
-									</div>
-								</transition>
-								<span class="iconfont icon-jia1 btn btn-light" @touchend.stop="add"></span>
-							</div>
-							</div>
-						</div>
-				</div>
-		   </li> 
-		</ul>
-		<div class="jiesuan">
-			<div id="all">
-				<span class="iconfont icon-radio1"></span><span>全选</span>
-			</div>
-			<div class="cartotal col-8">
-				<div class="col-7 flex-column zz">
-					<span class="font-weight-bold">合计：￥</span>
-					<div class="small">
-						<span>总额：</span>
-						<span>优惠：</span>
-					</div>
-				</div>
-				<div class="jiesuan-pay">
-					<span>结算()</span>
-				</div>
-				</div>
-			</div>
-
+	<div>
+		<div class="itemVue">
+			<div class="selectRadio">
+				<span class="iconfont" :class="[isSelected?'icon-radio1':'icon-radio']"></span>
+			</div> 
+			<div class="col-4">
+				<img :src="itemSrc" class="img-fluid thumbnail"/>								
 		</div>
-
+		<div class="introduce">
+			<span class="text-right">{{introduce}}</span>
+			<div class="introduce-bottom">
+				<span class="price">{{price}}</span>
+				<div class="count">
+					<transition name="showhide">
+						<div id="showhide">
+							<span class="iconfont icon-jian1 btn btn-light" @touchstart="reduce"></span>
+							<span class="num">{{car[itemId]?car[itemId][0][3]:0}}</span>
+						</div>
+					</transition>
+					<span class="iconfont icon-jia1 btn btn-light" @touchstart="add"></span>
+				</div>
+				</div>
+			</div>
+		</div>
 	</div>
 </template>
 <script>
 export default {
+	components:{"hh":()=>import("./hh.vue")},
+		props:["introduce","price","itemSrc","car","itemId"],
+		
 	data(){
 		return {
-			num:0,
-			price:50,
-			show:false,
-			isSelected:false
+			isSelected:false,
+			itemData:[]
 		}
 	},
 	methods:{
         add(){
-        	 if(this.num==0){
-        	 	this.show=true}
-        	this.num++
+        	 	this.$emit("reportData1",this.itemId)
         },
-        reduce(){
-        	if(this.num){
-             this.num--
-	         if(this.num==0){
-             this.show=false
-	         }
-
-        	}
-	        
+        reduce(){     	
+          this.$emit("reportData1",this.itemId,"reduce") 
+	        	        
         }
 	}
 }
 </script>
 <style>
 .icon-radio1,.icon-radio{color:#FFA500;font-size: 2rem;}
-.page3 .itemVue {display: flex;align-items: center;margin-left: 1rem;}
+.page3 .itemVue {display: flex;margin-left: 1rem;}
+.page3 .selectRadio{display: flex;align-items: center;}
+.page3 .text-right{font-size:1.5rem;}
 .page3{background: #E0EEEE}
 .page3 header{padding:0.5rem 0;}
 .page3 .itemVue{border-bottom: 2px dashed #FF8C69  }

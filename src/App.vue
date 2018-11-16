@@ -63,7 +63,7 @@
 						<li v-for="(val,key) in this.res">	
 							<i class="iconfont icon-changtiao text-danger"></i><span data-toggle="collapse" :data-target="val.name">{{key}}</span>
 							<ul class="collapse" :id="key" data-parent="#collapse-p">
-								<li class="text-center"  v-for="(x,y) in val.type" @touchend.stop="selectType">{{y}}</li>
+								<li class="text-center"  v-for="(x,y) in val.type" @touchstart.stop="selectType">{{y}}</li>
 							</ul>
 						</li>
 					</ul>
@@ -78,11 +78,37 @@
 					</ul>
 				</div>
 			</div><!--page2><-->
-			<ul class="page page3">
-				<li v-for="n in car">
-					<car/>
-				</li>
-			</ul>
+			<div class="page page3">
+		<header>
+			<h2 class="text-center">购物车</h2>
+			<hr/>
+		</header>
+		<ul class="body">
+			<li v-for="( n,itemId ) in car">
+				<keep-alive>
+					<car  :key="itemId" :introduce="n[0][0]" :price="n[0][1]" :itemSrc="n[0][2]" :itemId="itemId" :car="car" @reportData1="reportData1" />
+				</keep-alive>
+
+			</li> 
+		</ul>
+		<div class="jiesuan">
+			<div id="all">
+				<span class="iconfont icon-radio1"></span><span>全选</span>
+			</div>
+			<div class="cartotal col-8">
+				<div class="col-7 flex-column zz">
+					<span class="font-weight-bold">合计：￥</span>
+					<div class="small">
+						<span>总额：</span>
+						<span>优惠：</span>
+					</div>
+				</div>
+				<div class="jiesuan-pay">
+					<span>结算()</span>
+				</div>
+				</div>
+			</div><!--jiesuan><-->
+			</div><!--page3><-->
 			<div class="page page4">
 			</div>					
 	</div><!--a><-->
@@ -95,8 +121,8 @@
 </div>
 </template>
 <script>
-import itemVue from "./components/item.vue"
-import car from "./components/car.vue"
+//import itemVue from "./components/item.vue"
+//import car from "./components/car.vue"
 import item_jsonp from "./a.json"
 export default {
 	data(){
@@ -118,7 +144,7 @@ export default {
 			itemType:""
 		}
 	},
-	components:{itemVue,car},
+	components:{"itemVue":()=>import("./components/item.vue"),"car":()=>import("./components/car.vue")},
 	created(){
 		this.screenH=parseInt(window.screen.availHeight);
 		this.screenW=parseInt(window.screen.availWidth);
@@ -197,13 +223,29 @@ export default {
         	this.itemType=this.res.流行女装.type[name]
         },
         reportData(itemId,arg){       
-        	//商品数量++      
+        	//arg[1]为redure      
         	if(arg[1]){
         		arg[0][3]--
+         	this.$set(this.car,itemId,arg)       		
+        		if(arg[0][3]==0){
+        			this.$delete(this.car,itemId)
+        		}
         	}
-        	else{arg[0][3]++}
-
+        	else{arg[0][3]++
         	this.$set(this.car,itemId,arg)
+        	}
+        },
+        reportData1(itemId,reduce){
+        	let num=this.car[itemId][0][3]
+
+        	if (this.reduce){
+        		num--
+        	}
+        	else {
+        		num++
+        	}
+        	this.car[itemId][0].splice(3,1,num)
+        	console.log(this.car)
         }
 	},//methods
 	directives:{
@@ -254,9 +296,18 @@ html{font-size:10px;}
 .footer i.actived{color:#ff7e00;}
 .page2 .search input {line-height: 3rem;width:90%;padding-left:1rem;margin:0.5rem auto;display:block;border-radius: 2rem;outline:none;border:2px solid #FFC125;}
 .page2 .body {display: flex}
-.page2  ul#collapse-p{margin:0;padding:0;}
+.page2  ul#collapse-p{margin:0;padding:0;margin-top:1.5rem;}
 .page2  ul#collapse-p li{height:auto;line-height:3rem;width:auto;border-top:1px solid #fff;background:#FFC125;color:#fff;}
 .page2  ul#collapse-p span {display: inline-block;width:80%;font-size:1.5rem;}
 .page2  .item {display: flex;flex-wrap: wrap;justify-content:flex-start;flex-direction:column;flex-grow:1;padding-bottom:5rem;}
 .page2 .item span.maybemore {font-size:2rem;font-family: shaonv simHei;padding-top:1rem;}
+
+/* page3 style*/
+.jiesuan {background:#FA8072;display: flex;justify-content: space-between;margin-top:0.5rem}
+.jiesuan #all {display: flex;align-items: center;margin:0 1rem;font-size:2rem;}
+.jiesuan #all span {margin:0 0.5rem;font-family: simHei;font-weight:500;}
+.zz{justify-content:space-around;height:100%;font-size:1.8rem;padding:0!important;}
+.cartotal{display: flex;padding:0!important;}
+.jiesuan-pay{font-size: 2rem;font-weight: 600;background: yellow;display:flex;align-items: center;width:100%;justify-content: center;}
+.icon-radio1,.icon-radio{color:#FFA500;font-size: 2rem;}
 </style>

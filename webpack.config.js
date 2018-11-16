@@ -48,9 +48,10 @@ module.exports={
     	template:"a.html"
     }),
     new webpack.NamedModulesPlugin(),
-    new webpack.ProvidePlugin({      
-        $:"jquery",
-        Popper: ['popper.js', 'default']
+    new webpack.ProvidePlugin({
+    $: 'jquery',
+    jQuery: 'jquery',
+    Popper: ['popper.js', 'default']      
     }),
     new webpack.DefinePlugin({
 

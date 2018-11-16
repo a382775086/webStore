@@ -36,16 +36,18 @@ export default {
         add(){
         	 if(!this.car[this.itemId]){
         	 this.itemData.push(this.introduce,this.price,this.itemSrc,0)
-        	 	this.show=true
+
         	 }
+        	  this.show=true
         	 	this.$emit("reportData",this.itemData)
 
         },
         reduce(){
-               this.$emit("reportData",this.itemData,"reduce") 
-	        if (this.car[this.itemId][0][3]==0){
+        	 if (this.car[this.itemId][0][3]==1){
 	        	this.show=false
 	        };
+            this.$emit("reportData",this.itemData,"reduce") 
+	       
 
         }
 	}
