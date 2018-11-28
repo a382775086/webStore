@@ -12,7 +12,7 @@
 					"id":"上衣2",
 				"src":"src/pic/shopping/a2.jpg",
 				"price":"202.00",
-				"introduce":"Vero Moda简约通勤单排扣马蹄袖女衬衫|317351501"},
+				"introduce":"Vero Moda简约通勤单排扣马蹄袖女衬衫"},
 				{
 					"id":"上衣3",
 				"src":"src/pic/shopping/a3.jpg",
@@ -260,14 +260,326 @@
 			]
 		}
 	},
-	"电子产品":{
-		 "name":"#电子产品",
+	"数码产品":{
+		 "name":"#数码产品",
          "type":{
-        "手机":{},
-		"电脑配件":{},
-		"相机":{},
-		"其他":{}
+        "手机":[
+        	{
+					"id":"手机1",
+				"src":"src/pic/shopping/e1.jpg",
+				"price":"5999.00",
+				"introduce":"Apple/苹果 iPhone 8 Plus"},
+				{
+					"id":"手机2",
+				"src":"src/pic/shopping/e2.jpg",
+				"price":"2499.00",
+				"introduce":"小米 小米手机8"},
+				{
+					"id":"手机3",
+				"src":"src/pic/shopping/e3.jpg",
+				"price":"6499.00",
+				"introduce":"iPhone XR 移动联通电信4G手机双卡双待"
+				},
+				{
+					"id":"手机4",
+				"src":"src/pic/shopping/e4.jpg",
+				"price":"3999.00",
+				"introduce":"Huawei/华为 Mate旗舰980芯片商务智能手机"
+				},
+				{
+					"id":"手机5",
+				"src":"src/pic/shopping/e5.jpg",
+				"price":"749.00",
+				"introduce":"Nokia/诺基亚 X5全网通4G全面屏双摄"
+				},
+				{
+					"id":"手机6",
+				"src":"src/pic/shopping/e6.jpg",
+				"price":"1399.00",
+				"introduce":"荣耀10青春版渐变色全网通智能手机"
+				},
+				{
+					"id":"手机7",
+				"src":"src/pic/shopping/e7.jpg",
+				"price":"1599.00",
+				"introduce":"OPPO K1全面屏拍照屏幕指纹美颜骁龙旗舰手机"
+				},
+				{
+					"id":"手机8",
+				"src":"src/pic/shopping/e8.jpg",
+				"price":"2798.00",
+				"introduce":"vivo X23幻彩版水滴全面屏拍照超大广角智能4G限手机"
+				},
+				{
+					"id":"手机9",
+				"src":"src/pic/shopping/e9.jpg",
+				"price":"2298.00",
+				"introduce":"vivo Z3水滴屏高通骁龙710AIE处理器全网通智能4G手机"
+				},
+				{
+					"id":"手机10",
+				"src":"src/pic/shopping/e10.jpg",
+				"price":"3298.00",
+				"introduce":"Meizu/魅族 魅族16th新品骁龙845 全面屏"}
+        ],
+		"电脑配件":[
+		{
+					"id":"电脑配件1",
+				"src":"src/pic/shopping/f1.jpg",
+				"price":"1899.00",
+				"introduce":"七彩虹GTX1060 6G游戏显卡 iGame 烈焰战神U 6GD5 吃鸡显卡"},
+				{
+					"id":"电脑配件2",
+				"src":"src/pic/shopping/f2.jpg",
+				"price":"1119.00",
+				"introduce":"影驰GTX1050Ti 4G大将"},
+				{
+					"id":"电脑配件3",
+				"src":"src/pic/shopping/f3.jpg",
+				"price":"2899.00",
+				"introduce":"七彩虹 iGame1070烈焰战神U-8GD5 Top 游戏显卡 GTX1070吃鸡显卡"
+				},
+				{
+					"id":"电脑配件4",
+				"src":"src/pic/shopping/f4.jpg",
+				"price":"3999.00",
+				"introduce":"技嘉 RTX 2070 256bit 8GB GDDR6 雕牌/WF3/GAMING OC 图灵显卡"
+				},
+				{
+					"id":"电脑配件5",
+				"src":"src/pic/shopping/f5.jpg",
+				"price":"2599.00",
+				"introduce":"华硕DUAL RX580 O8G游戏吃鸡电脑独立显卡台式机amd显卡rx580显卡"
+				},
+				{
+					"id":"电脑配件6",
+				"src":"src/pic/shopping/f6.jpg",
+				"price":"609.00",
+				"introduce":"松人24英寸超薄曲面显示器高清电竞吃鸡游戏液晶台式电脑屏幕曲屏"
+				},
+				{
+					"id":"电脑配件7",
+				"src":"src/pic/shopping/f7.jpg",
+				"price":"3999.00",
+				"introduce":"Dell/戴尔 27英寸4K超高清微边框IPS屏HDR绘图游戏显示器U2718Q"
+				},
+				{
+					"id":"电脑配件8",
+				"src":"src/pic/shopping/f8.jpg",
+				"price":"929.00",
+				"introduce":"三星显示器官方 23.5英寸曲面 C24F396FHC电竞液晶曲屏电脑屏ps4"
+				},
+				{
+					"id":"电脑配件9",
+				"src":"src/pic/shopping/f9.jpg",
+				"price":"949.00",
+				"introduce":"TCL曲面显示器27英寸 T27M6C"
+				},
+				{
+					"id":"电脑配件10",
+				"src":"src/pic/shopping/f10.jpg",
+				"price":"1369.00",
+				"introduce":"HKC 27英寸144HZ曲面显示器GF70台式电脑无边框电竞游戏吃鸡PS4屏"}],
+		"相机":[
+		{
+					"id":"相机1",
+				"src":"src/pic/shopping/g1.jpg",
+				"price":"2399.00",
+				"introduce":"Canon/佳能 PowerShot SX60 HS 高清 旅游 摄影 长焦数码照相机"},
+				{
+					"id":"相机2",
+				"src":"src/pic/shopping/g2.jpg",
+				"price":"3799.00",
+				"introduce":"佳能m50微单相机Canon/佳能eos M50蚂蚁摄影VLOG高清数码旅游入门级女"},
+				{
+					"id":"相机3",
+				"src":"src/pic/shopping/g3.jpg",
+				"price":"2299.00",
+				"introduce":"Sony/索尼 DSC-HX400高清长焦数码相机高清 单反外观"
+				},
+				{
+					"id":"相机4",
+				"src":"src/pic/shopping/g4.jpg",
+				"price":"2999.00",
+				"introduce":"Canon/佳能 EOS 1500D蚂蚁摄影 相机单反机高清数码旅游"
+				},
+				{
+					"id":"相机5",
+				"src":"src/pic/shopping/g5.jpg",
+				"price":"1299.00",
+				"introduce":"Sony/索尼 DSC-WX350 蚂蚁摄影 高清长焦数码照相机"
+				},
+				{
+					"id":"相机6",
+				"src":"src/pic/shopping/g6.jpg",
+				"price":"529.00",
+				"introduce":"Sony/索尼DSC-W800数码相机 家用高清卡片机旅游自拍5倍光学变焦"
+				},
+				{
+					"id":"相机7",
+				"src":"src/pic/shopping/g7.jpg",
+				"price":"1399.00",
+				"introduce":"Canon/佳能卡片机数码高清照相机 PowerShot SX620长焦家用正品"
+				},
+				{
+					"id":"相机8",
+				"src":"src/pic/shopping/g8.jpg",
+				"price":"3099.00",
+				"introduce":"Nikon/尼康D5300入门单反相机 18-55镜头 d5300套机 数码单反相机"
+				},
+				{
+					"id":"相机9",
+				"src":"src/pic/shopping/g9.jpg",
+				"price":"5849.00",
+				"introduce":"Canon/佳能EOS 800D 18-135mm套机 入门级高清旅游单反相机 正品"
+				},
+				{
+					"id":"相机10",
+				"src":"src/pic/shopping/g10.jpg",
+				"price":"2449.00",
+				"introduce":"Canon/佳能m100 15-45 微单相机入门级 vlog 高清数码旅游女生eos"}],
+		"其他":[
+		{
+					"id":"其他1",
+				"src":"src/pic/shopping/h1.jpg",
+				"price":"179.00",
+				"introduce":"小白无线监控摄像头智能家用高清夜视手机远程wifi"},
+				{
+					"id":"其他2",
+				"src":"src/pic/shopping/h2.jpg",
+				"price":"1599.00",
+				"introduce":"Ricoh/理光 Theta SC全景数码相机理光全景相机支持安居客"},
+				{
+					"id":"其他3",
+				"src":"src/pic/shopping/h3.jpg",
+				"price":"139.00",
+				"introduce":"GK100机械键盘青轴黑轴茶轴红轴游戏104键全键无冲"
+				},
+				{
+					"id":"其他4",
+				"src":"src/pic/shopping/h4.jpg",
+				"price":"359.00",
+				"introduce":"cherry樱桃 黑轴青轴银轴静音红轴"
+				},
+				{
+					"id":"其他5",
+				"src":"src/pic/shopping/h5.jpg",
+				"price":"139.00",
+				"introduce":"达尔优牧马人机械键盘EK815"
+				},
+				{
+					"id":"其他6",
+				"src":"src/pic/shopping/h6.jpg",
+				"price":"38.60",
+				"introduce":"雷柏i35无线蓝牙鼠标4.0鼠标"
+				},
+				{
+					"id":"其他7",
+				"src":"src/pic/shopping/h7.jpg",
+				"price":"49.90",
+				"introduce":"英菲克可充电式无线鼠标静音"
+				},
+				{
+					"id":"其他8",
+				"src":"src/pic/shopping/h8.jpg",
+				"price":"99.00",
+				"introduce":"无线鼠标智能"
+				},
+				{
+					"id":"其他9",
+				"src":"src/pic/shopping/h9.jpg",
+				"price":"299.00",
+				"introduce":"罗技G304无线游戏鼠标 绝地求生吃鸡LOL宏电竞机械笔记本台式电脑"
+				},
+				{
+					"id":"其他10",
+				"src":"src/pic/shopping/h10.jpg",
+				"price":"27.00",
+				"introduce":"电脑电竞吃鸡绝地求生滑鼠垫男"}]
          }
-	}
+	},
+	"家具日用":{
+		 "name":"#家具日用",
+         "type":{
+        "沙发":[],
+		"床":[],
+		"电视柜":[],
+		"衣柜":[]
+         }
+	},
+	"户外健身":{
+		 "name":"#户外健身",
+         "type":{
+        "鱼线":[],
+		"登山包":[],
+		"帐篷":[],
+		"睡袋":[]
+         }
+	},
+	"演奏乐器":{
+		 "name":"#演奏乐器",
+         "type":{
+        "钢琴":[],
+		"古筝":[],
+		"吉他":[],
+		"二胡":[]
+         }
+	},
+	"美妆洗护":{
+		 "name":"#美妆洗护",
+         "type":{
+        "洗发水":[],
+		"护发素":[],
+		"牙刷":[],
+		"漱口水":[]
+         }
+	},
+	"美食零食":{
+		 "name":"#美食零食",
+         "type":{
+        "生鲜":[],
+		"美食":[],
+		"零食":[],
+		"米面粮油":[]
+         }
+	},
+	"童装玩具":{
+		 "name":"#童装玩具",
+         "type":{
+        "学步鞋":[],
+		"早教":[],
+		"积木":[],
+		"儿童自行车":[]
+         }
+	},
+	"孕产用品":{
+		 "name":"#孕产用品",
+         "type":{
+        "哺乳文胸":[],
+		"吸奶器":[],
+		"孕妇内裤":[],
+		"防溢乳垫":[]
+         }
+	},
+	"配件配饰":{
+		 "name":"#配件配饰",
+         "type":{
+        "棉麻围巾":[],
+		"手工皮带":[],
+		"真皮手套":[],
+		"爵士帽":[]
+         }
+	},
+	"奶粉辅食":{
+		 "name":"#奶粉辅食",
+         "type":{
+        "爱他美":[],
+		"喜宝":[],
+		"奶片":[],
+		"暖奶器":[]
+         }
+     },
+     "了解更多":{		 
+         }
 }
 				

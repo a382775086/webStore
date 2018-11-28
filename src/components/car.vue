@@ -2,7 +2,7 @@
 	<div>
 		<div class="itemVue">
 			<div class="selectRadio">
-				<span class="iconfont" :class="[isSelected?'icon-radio1':'icon-radio']"></span>
+				<span @click.stop="itemSelect" class="iconfont" :class="[isSelected?'icon-radio1':'icon-radio']"></span>
 			</div> 
 			<div class="col-4">
 				<img :src="itemSrc" class="img-fluid thumbnail"/>								
@@ -12,13 +12,12 @@
 			<div class="introduce-bottom">
 				<span class="price">{{price}}</span>
 				<div class="count">
-					<transition name="showhide">
 						<div id="showhide">
-							<span class="iconfont icon-jian1 btn btn-light" @touchstart="reduce"></span>
-							<span class="num">{{car[itemId]?car[itemId][0][3]:0}}</span>
+							<span class="iconfont icon-jian1 btn btn-light" @click="reduce"></span>
+							<span class="num">{{car[itemId]?car[itemId][4]:0}}</span>
 						</div>
-					</transition>
-					<span class="iconfont icon-jia1 btn btn-light" @touchstart="add"></span>
+					<span class="iconfont icon-jia1 btn btn-light" @click="add"></span>
+					<span class="iconfont icon-shanchu btn btn-light" @click.stop="deleteItem"></span>
 				</div>
 				</div>
 			</div>
@@ -27,13 +26,17 @@
 </template>
 <script>
 export default {
-	components:{"hh":()=>import("./hh.vue")},
 		props:["introduce","price","itemSrc","car","itemId"],
-		
+
 	data(){
 		return {
 			isSelected:false,
 			itemData:[]
+		}
+	},
+	updated(){
+		if (this.car[this.itemId]){
+			this.isSelected=this.car[this.itemId][5]
 		}
 	},
 	methods:{
@@ -41,8 +44,14 @@ export default {
         	 	this.$emit("reportData1",this.itemId)
         },
         reduce(){     	
-          this.$emit("reportData1",this.itemId,"reduce") 
-	        	        
+          this.$emit("reportData1",this.itemId,"reduce")	        	        
+        },
+        deleteItem(){
+        	this.$emit("deleteItem",this.itemId);
+        },
+        itemSelect(){
+        	this.isSelected=!this.isSelected;
+        	this.$emit("itemSelect",this.itemId,this.isSelected)
         }
 	}
 }
@@ -61,4 +70,10 @@ export default {
 .zz{justify-content:space-around;height:100%;font-size:1.8rem;padding:0!important;}
 .cartotal{display: flex;padding:0!important;}
 .jiesuan-pay{font-size: 2rem;font-weight: 600;background: yellow;display:flex;align-items: center;width:100%;justify-content: center;}
+.page3 .modal-content{margin-top:10rem;border-radius: 5%;border:2px solid #FFC125;}
+.page3 .modal-content .modal-header span{font-size:2rem;display: block;margin:0 auto;}
+.page3 .modal-content .modal-header .close span{font-size: 2rem}
+.page3 .modal-content .modal-body .btn {width:40%;}
+.page3 .modal-content .modal-body  span{display: inline-block;font-size:2rem;}
+.page .icon-shanchu {margin-left:1rem;color:#fff;background: #f00}
 </style>
