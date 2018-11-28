@@ -151,9 +151,7 @@ export default {
 			//foot栏gao度 无单位px;
 			footHeight:0,
 			//分类栏当前打开的index；
-			itemNowClassList:"",
-			//是否允许垂直滑动
-			canhorizantolSlide:true
+			itemNowClassList:""
 		}
 	},
 	components:{"itemVue":()=>import("./components/item.vue"),"car":()=>import("./components/car.vue"),"loginVue":()=>import("./components/login.vue")},
@@ -200,9 +198,9 @@ export default {
 		touchmove(){
 			//重新定义touchmove	
 			event.preventDefault();
+			this.offset_x=event.targetTouches[0].screenX-this.clientx;
          //取移动距离    负数=左滑    正数=右滑  
-         if(this.canhorizantolSlide){
-         	this.offset_x=event.targetTouches[0].screenX-this.clientx;
+         if( Math.abs(this.offset_x) >40) {         	
           if(  (this.offset_x>=0 && this.pageNum===0 ) || (this.offset_x<=0 && this.pageNum===3) ){
           	//需要清零this.offset_x 否则会触发横向补充移动函数;
           	this.offset_x=0
@@ -217,7 +215,6 @@ export default {
 		},
 		touchmoveVertical(){
 			event.preventDefault();
-
 			let e_height=event.currentTarget.clientHeight;
 			//向上滑 负数  向下滑 正数
 			this.offset_y=event.targetTouches[0].screenY-this.clienty;
@@ -231,8 +228,7 @@ export default {
 					this.offset_y=-(e_height-this.screenH+this.top_val+this.footHeight)			
 				}
 				event.currentTarget.style.top=this.top_val+this.offset_y+"px";
-				//阻止水平滑动;
-				this.canhorizantolSlide=false;        		        
+				//阻止水平滑动;     		        
 		        this.offset_y=0;		
 			}
 		},
