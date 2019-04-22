@@ -1,5 +1,5 @@
-# 移动端的单页面购物网站
-
+# 移动端单页面购物网站
+----------
 ## 项目运行：
 ----------
 * npm i
@@ -15,3 +15,7 @@
 
 4.个人中心
 
+演示效果：
+-------
+
+![Image text](https://raw.githubusercontent.com/a382775086/webStore/master/a.gif)
