@@ -18,4 +18,4 @@
 演示效果：
 -------
 
-![Image text](https://raw.githubusercontent.com/a382775086/webStore/master/a.gif)
+![Image text](https://raw.githubusercontent.com/a382775086/webStore/master/readme/a.gif)
